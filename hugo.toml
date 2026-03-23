@@ -1,0 +1,6 @@
+baseURL = 'https://example.org/'
+languageCode = 'zh-cn'
+title = '彩虹兔的博客'
+theme = ["github.com/D-Sketon/hugo-theme-reimu"]
+ 
+ 
