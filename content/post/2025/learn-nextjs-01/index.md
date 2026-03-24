@@ -1,0 +1,385 @@
+---
+
+title: "【01】学习Next.js框架之安装入门、路由与布局"
+slug: "learn-nextjs-01"
+description: "本文介绍了Next.js的入门、路由、布局等知识，适合有一定React基础的人阅读。"
+date: "2025-10-26T11:37:50+08:00"
+lastmod: "2025-10-26T11:37:50+08:00"
+
+categories: ["学习笔记"]
+tags: ["nextjs"]
+reaction: true
+top: false
+
+---
+
+## 引言
+
+Next.js 是 React 的一个 Web 框架，本篇文章是 “学习NextJs框架”的第一篇教程。
+
+学习之前，默认读者已经熟悉 HTML、CSS、TypeScript、React。
+
+## 安装
+
+创建新的Next.js应用并在本地运行它。
+
+### 快速入门
+
+1. 创建一个Next.js项目并命名为`my-app`。
+2. `cd my-app`并运行程序。
+3. 访问`http://localhost:3000`。
+
+```cmd
+npx create-next-app@latest my-app --yes
+cd my-app
+npm run dev
+```
+
+- 这里使用的是`npm`，如果你更熟悉`pnpm`、`yarn`、`bun`等方式，可以按你熟悉的方式运行项目。
+
+- `--yes`使用已保存的首选项或默认值跳过提示。默认设置启用 TypeScript、Tailwind、App Router 和 Turbopack，并带有导入别名`@/*`。
+
+### 系统要求
+
+在开始之前，请确保您的系统满足以下要求：
+
+- [Node.js 20.9](https://nodejs.org/)或以后。
+- macOS、Windows（包括 WSL）或 Linux。
+
+### 应用目录
+
+Next.js使用文件系统路由，这意味着应用程序中的路由取决于您构建文件的方式。
+
+文件夹`app`是程序路由的根目录，若想修改`http://localhost:3000`的内容，则只需修改`app/page.tsx`中的内容即可。
+
+若是有其他页面，例如`http://localhost:3000\user`，则只需设置`app/user/page.tsx`中的内容即可。
+
+### 公用文件夹
+
+创建一个 public 文件夹用于存储静态资产，例如图像、字体等。
+
+在代码中，可以使用根路径（/）引用这些资产，例如`public/profile.png`可引用为`/profile.png`。
+
+```ts
+import Image from 'next/image'
+ 
+export default function Page() {
+  return <Image src="/profile.png" alt="Profile" width={100} height={100} />
+}
+```
+
+## 项目结构
+
+关于项目结构，[Next.js官方文档](https://nextjs.org/docs/app/getting-started/project-structure)写的很好
+
+## 路由
+
+### 捕获所有路由片段
+
+使用 `doc/[...slug]/page.tsx` 可以知晓`doc`路由下所有的子路由。
+
+```ts
+export default async function Docs({
+    params,
+}: {
+    params: Promise<{ slug: string[] }>;
+}) {
+    const { slug } = await params;
+    if(slug?.length === 2) {
+        return (
+            <h1>
+                Viewing docs for feature {slug[0]} and concept {slug[1]}
+            </h1>
+        );
+    } else if (slug?.length === 1) {
+        return <h1>Viewing docs for feature {slug[0]}</h1>
+    } 
+    return <h1>Viewing docs</h1>
+}
+```
+
+- 在上述代码中，如果你访问`http://localhost:3000/docs/routing`，那么会得到内容`Viewing docs for feature routing`
+
+- 同理，访问`http://localhost:3000/docs/routing/catch-all-segments`，那么会得到内容`Viewing docs for feature routing and concept catch-all-segments`
+
+- 如果你在`docs`目录中没有`page.tsx`，那么访问`http://localhost:3000/docs`是会报错的。如果你想得到内容`Viewing docs`而不是去单独创建一个`page.tsx`，那么你就需要将文件夹改名为：`[[...slug]]`，即为`doc/[[...slug]]/page.tsx`
+
+![捕获路由所有片段](https://s2.loli.net/2025/10/26/y5cKa63xzH8fbr2.png)
+
+### 自定义404页面`not-found.tsx`
+
+创建`app/not-found.tsx`文件，这个文件就是项目404页面。
+
+如果你希望某些页面单独使用404，例如“未找到产品”、“没有该用户”等页面级别的404，则只需要在对应文件夹下创建页面文件即可，例：产品的评论数量不会超过100，超过的就要404，那么可以写如下代码：
+
+这是页面代码:
+
+```ts 
+// app/products/[productId]/reviews/[reviewId]/page.tsx
+import { notFound } from "next/navigation";
+export default async function ProductReview({
+    params,
+}: {
+    params:Promise<{ productId:string;reviewId:string}>;
+}) {
+    const { productId,reviewId }= await params;
+    if(parseInt(reviewId) > 1000) {
+        notFound();
+    }
+    return (
+        <h1>Review {reviewId} for product {productId}</h1>
+    );
+}
+```
+
+这是404代码: 
+
+```ts 
+// app/products/[productId]/reviews/[reviewId]/not-found.tsx
+"use client";
+
+import { usePathname } from "next/navigation"
+
+export default function NotFound() {
+    const pathname = usePathname();
+    const productId = pathname.split("/")[2];
+    const reviewId = pathname.split("/")[4];
+    return (
+        <div>
+            <h2>
+                Review {reviewId} not found for product {productId}
+            </h2>
+        </div>
+    );
+}
+```
+
+- 访问`http://localhost:3000/products/1/reviews/1001`就会出现`Review not found`，而不是`app/not-found.tsx`的内容了。
+
+- 也就是说**层级深的404页面就会覆盖层级浅的404页面**，即`app/products/[productId]/reviews/[reviewId]/not-found.tsx`覆盖了`app/not-found.tsx`
+
+- `"use client"`代表着该组件是客户端渲染组件，因为Next.js默认所有的React组件都是服务器端组件，这里使用了`import { usePathname } from "next/navigation"` Next的Hook，只能在客户端使用，所以需要写上`"use client"`
+
+
+
+### 公开访问&私有访问
+
+一个路由只有在添加了`page.tsx`或者`page.js`才会成为公开可访问的。
+
+- 如果你想要某些文件只在内部使用，不对外公开链接，那么可以在文件夹中添加下划线前缀“_”，这样**该文件夹及其所有子文件夹都会被排除在外**
+
+- 如果你的项目确实需要用到下划线“_”，请使用“%5F”代替。
+
+- 这个**并非必须**这样做，你也可以把文件夹放到`app`目录之外，以确保不会公开访问。
+
+### 路由组
+
+**路由组**可以在不影响URL结构的同时让项目结构更有组织性
+
+> 省流，文件夹使用圆括号"**()**"包裹即可，被包裹的将不会在路由上显示<br>
+> 例如：`app/(auth)/login` 可通过 `http://localhost:3000/login`访问。<br>
+> 而 `app/auth/login` 则是通过`http://localhost:3000/auth/login`访问
+
+值得注意的是，**路线组实际上是唯一可以在不影响URL的情况下在不同路由之间共享布局的方式**
+
+假设有需求：`http://localhost:3000/register`、`http://localhost:3000/login`为注册和登录页面。直接在`app`目录下创建`app/register/page.tsx`确实可以，但是如果是多人开发（甚至自己过个十天半个月的）就会浪费时间来寻找注册和登录页面代码的位置，这样很不好，没有组织性。当然，也有解决办法，就是`app/auth/register/page.tsx`和`app/auth/login/page.tsx`，但是这样访问链接就变了，那么有没有不更换访问链接，但同时注册和登录的代码文件又放到一起的方法呢？答案是有的，就是文件夹使用圆括号“()”包裹，`app/(auth)`，将注册和登录放到这个文件夹下，访问链接不变，同时代码也放到了一起。
+
+## 布局
+
+与`page.tsx`一样，`layout.tsx`是Next.js约定俗成的文件命名。
+
+### 基础用法
+
+```ts
+export const metadata ={
+    title: 'Next.js',
+    description:'Generated by Next.js',
+}
+
+export default function RootLayout({
+    children,
+}: {
+    children:React.ReactNode
+}) {
+    return (
+        <html lang="en">
+            <body>{children}</body>
+        </html>
+    )
+}
+```
+
+- `app`根目录下必须要有一个`layout.tsx`，此为根布局；如果你删除了它，那么在下次运行`next dev`时，它会自动重新生成文件。
+
+### 嵌套多布局
+
+除了根布局，你可以在其他页面添加`layout.tsx`，并编写代码，当访问对应页面时，布局将会嵌套显示。
+
+例如在`app/products/[productId]/layout.tsx`添加如下代码：
+
+```ts
+export default function ProductDetailsLayout({
+    children,
+}: {
+children: React.ReactNode;
+}) {
+    return (
+        <>
+            {children}
+            <h2>Featured products</h2>
+        </>
+    );
+}
+```
+
+运行结果，如下图显示:
+
+![嵌套布局示例](https://s2.loli.net/2025/10/26/mWoHMr6DSUpguxl.png)
+
+### 多个根布局
+
+有时候希望除了**登录和注册**页面，其他页面都要有页眉和页脚。如果我们在根布局`app/layout.tsx`中添加页眉页脚，它将应用与所有的页面，包括登录注册页面，这显然与我们需要的不符。
+
+这时候就需要用到之前的**路由组**功能了。
+
+最终目录结构可能如下:
+```
+app
+├─(auth)
+│  ├─login
+│  ├─register
+│  └─layout.tsx        // 根布局
+├─(dashboard)
+│  ├─page1
+│  ├─page2
+│  ├─layout.tsx        // 根布局
+│  └─page.tsx          // 根页面
+│ ...
+
+```
+
+## 元数据`metadata`
+
+最直观、最能体现的就是页面的标题了。Next.js提供了API允许我们为每个页面定义元数据。
+
+### 规则
+
+- `layout.tsx`和`page.tsx`都可以导出元数据。Layout元数据适用于其所有页面，而页面元数据仅针对该特定页面。
+
+- 元数据遵循自上而下的顺序，从根级别开始。
+
+- 当元数据存在于路由的多个位置时，它们会合并在一起，页面元数据将覆盖对应属性的布局元数据。
+
+权重比较：`页面元数据 > 页面布局元数据 > 根页面元数据 > 根页面布局元数据`，优先显示页面元数据。
+
+- *（重要）*在使用了`"use client";`的页面上无法工作。需要将元数据保留到几组件中，并且将任何客户端功能提取到单独的组件中。
+
+### 静态元数据
+
+在`page.tsx`或者`layout.tsx`中，填写如下代码：
+
+```ts
+export const metadata ={
+    title: 'Next.js',
+    description:'Generated by Next.js',
+}
+```
+
+- 此为元数据对象。
+
+### 动态元数据
+
+这在元数据依赖于动态信息(如当前路由参数、外部数据或父段中定义的元数据)时非常有用。
+
+```ts
+import { Metadata } from "next";
+
+type Props = {
+    params: Promise<{ productId: string }>;
+};
+
+export const generateMetadata = async ({
+    params,
+}: Props): Promise<Metadata> => {
+    const id = (await params).productId;
+    const title = await new Promise((resolve) => {
+        setTimeout(() => {
+            resolve(`iPhone ${id}`);
+        }, 100);
+    });
+    return {
+        title: `Product ${title}`,
+    };
+};
+
+export default async function ProductDetails({ params }: Props) {
+    return (
+        <div>123123</div>
+    )
+}
+
+```
+
+- 此为生成元数据的函数。
+
+- **不能在同一路由中同时使用元数据对象和生成元数据的函数。**
+
+### title字段
+
+#### 字符串形式
+
+这个不必多说
+
+```ts
+export const metadata ={
+    title: 'Next.js',
+    description:'Generated by Next.js',
+}
+
+----------------分割线------------------
+
+export const generateMetadata = async ({
+    params,
+}: Props): Promise<Metadata> => {
+    const id = (await params).productId
+    return {
+        title: `Product ${id}`,
+    };
+};
+```
+
+- 不管是静态数据还是动态数据,都是字符串形式的。
+
+#### 对象形式
+
+使用对象形式的title，在某些情况下会让我们省很多事情。
+
+```ts
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+    title: {
+        default: "",
+        template: "%s | caihongtu",
+        absolute: "",
+    },
+}
+```
+
+- 如果你不知道`absolute`写什么，请删除该字段，而不是写`absolute: ""`，因为它会让标题变为空！
+
+- default: 默认标题，供给没有指定标题的子页面使用。
+
+- template: 可以给子页面的标题添加前缀或者后缀，%s代表子页面标题。
+
+- absolute: 此项可以脱离父级title的template设置，这里写什么就是什么。
+
+## 附录
+
+### 参考
+
+- [7小时精通Next.js 15终极教程 (1小时15分钟之前) | bilibili](https://www.bilibili.com/video/BV1kvPcekE3K/?share_source=copy_web&vd_source=1068a5fa51e306b8564255b5bf628111)
+
+### 版权信息
+
+本文原载于 [彩虹兔の博客](https://cai-hong-tu-blog.pages.dev/)，遵循 CC BY-NC-SA 4.0 协议，复制请保留原文出处。

@@ -192,8 +192,8 @@ sort_order:
 
 # Pagination
 paginate:
-  archive: # Number of posts per page in archive and taxonomy pages
-  post: # Number of posts per page in home and other list pages
+  archive: 10 # 归档页和分类标签页每页文章数量
+  post: 7 # 首页和其他列表页每页文章数量
 
 ########################################
 # CSS
@@ -281,7 +281,7 @@ code_block:
   # true means expand all code blocks by default
   # false means collapse all code blocks by default
   # number means collapse the code block by default when the number of lines exceeds the specified value
-  expand: true
+  expand: 15
 
 # Clipboard configuration
 clipboard:
@@ -442,10 +442,10 @@ utterances:
 ########################################
 
 algolia_search:
-  enable: false
-  appID:
-  apiKey:
-  indexName:
+  enable: true
+  appID: LIEIUFTMA7
+  apiKey: 11f478cdd610c81de40c63126f818136
+  indexName: algolia
   hits:
     per_page: 10
 
