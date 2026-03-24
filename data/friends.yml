@@ -1,3 +1,8 @@
+- name: 彩虹兔の主页
+  url: https://profile.caihongtu.top/
+  desc: My profile website
+  # image: /avatar/avatar.webp
+  image: https://profile.caihongtu.top/assets/img/headimg.png
 - name: D-Sketon
   url: https://d-sketon.github.io/
   desc: Hexo 建站
@@ -6,3 +11,43 @@
   url: https://d-sketon.github.io/astro-theme-reimu/
   desc: Astro 建站
   image: https://d-sketon.github.io/avatar/avatar.webp
+- name: 随机图片
+  url: https://picsum.photos/
+  desc: Lorem Picsum | 通过url获取随机图片
+  image: 'https://picsum.photos/favicon.ico'
+- name: UApi | 公益API平台
+  url: https://uapis.cn/
+  desc: 一个集合了常用类型Public API接口的公益开放平台
+  image: 'https://uapis.cn/favicon.svg'
+- name: S.EE(原SMMS图床)
+  url: https://s.ee/
+  desc: 可以免费上传5GB的图片 | 支持右键粘贴图片
+  image: 'https://assets.seecdn.com/images/see/home/Logo.svg'
+- name: base64在线编码解码
+  url: https://www.base64encode.org/
+  desc: 可以在网站头部选择 Encode or Decode
+  image: 'https://www.base64encode.org/assets/images/b64-180.webp'
+- name: Emoji表情
+  url: https://www.emojiall.com/zh-hans
+  desc: 可以直接复制粘贴的emoji
+  image: 'https://www.emojiall.com/logo.png'
+- name: 在线转换多种格式文件
+  url: https://www.aconvert.com/cn/
+  desc: 转换PDF、文档、电子书、图片、视频、音频、压缩包
+  image: 'https://www.aconvert.com/favicon.ico'
+- name: I LOVE IMG | 可批量编辑图片的所有工具
+  url: https://www.iloveimg.com/zh-cn
+  desc: 免费编辑图片：包括但不限于处理透明底等……
+  image: 'https://www.iloveimg.com/img/iloveimg.svg'
+- name: 哪煮米-域名比价
+  url: https://www.nazhumi.com/
+  desc: 对域名后缀、注册价格、续费价格、转入价格进行排名
+  image: 'https://www.nazhumi.com/favicon.ico'
+- name: Cosmotown域名服务商
+  url: https://www.cosmotown.com/
+  desc: .com域名最便宜的服务商 | 支持Paypal付款
+  image: 'https://cosmotown-prod-cdn.s3.amazonaws.com/themes/default/images/4d729aec.original-logo.jpg'
+- name: IT-Tools | IT工具箱
+  url: https://it-tools.tech/
+  desc: 对IT工作人员非常有用的工具箱，包含了很多实用的工具
+  image: 'https://it-tools.tech/favicon.ico'
