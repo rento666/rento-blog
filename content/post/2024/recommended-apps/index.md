@@ -4,7 +4,7 @@ title: "个人推荐的一些应用、APP、网站"
 slug: "apps"
 description: "内含你想要的工具！"
 date: "2024-12-08T21:44:34+08:00"
-lastmod: "2025-08-07T11:18:21+08:00"
+lastmod: "2026-03-24T22:37:53+08:00"
 categories: ["软件安利"]
 tags: ["app", "software"]
 
@@ -36,17 +36,30 @@ https://gitee.com/maotoumao/MusicFreePlugins/raw/master/plugins.json
 
 > 个人建议，选择**bilibili**或者**YouTube**音乐源更好，这两个的音乐也更全。
 
-### MoonTV-视频网站（可自行私密部署）
+### MoonTVPlus-视频网站（可自行私密部署）
 
-[MoonTV](https://github.com/LunaTechLab/MoonTV)是一个开箱即用的、跨平台的影视聚合播放器。
+[MoonTVPlus](https://github.com/mtvpls/MoonTVPlus)是一个开箱即用的、跨平台的影视聚合播放器。
 
-内置数十个**免费**资源站点，一次搜索立刻返回全源结果（实测部分站点的速度很快）。
+无内置播放源和直播源！
 
-电影、电视剧、综艺、纪录片应有尽有！
+可以部署到[Vercel](https://vercel.com/)或者[Cloudflare Workers](https://cloudflare.com/)，实现私人影院！
 
-可以部署到[Vercel](https://vercel.com/)，实现私人影院！
+**一键部署到 Vercel**
 
-1. **Fork**[本仓库](https://github.com/LunaTechLab/MoonTV)到你的 GitHub 账户。
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/mtvpls/MoonTVPlus)
+
+**一键部署到 Zeabur**
+
+[![Deploy on Zeabur](https://zeabur.com/button.svg)](https://zeabur.com/templates/SCHCAY/deploy)
+
+**一键部署到 Render**
+
+[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/mtvpls/MoonTVPlus)
+
+
+手动部署：下面以部署到Vercel举例：
+
+1. **Fork**[本仓库](https://github.com/mtvpls/MoonTVPlus)到你的 GitHub 账户。
 2. 登陆 **Vercel**，点击 **Add New → Project**，选择 Fork 后的仓库。
 3. 设置 **PASSWORD** 环境变量（访问密码）。
 4. 保持默认设置完成首次部署。
@@ -130,6 +143,4 @@ https://gitee.com/maotoumao/MusicFreePlugins/raw/master/plugins.json
 
 - [VS Code 的 7 个开源替代品 | Linux中国](https://linux.cn/article-12382-1.html)
 
-### 版权信息
 
-本文原载于 [彩虹兔の博客](https://cai-hong-tu-blog.pages.dev/)，遵循 CC BY-NC-SA 4.0 协议，复制请保留原文出处。

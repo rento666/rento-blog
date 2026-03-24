@@ -767,6 +767,4 @@ Component: SweetNoteSection
 
 - [手摸手教你用 Taro + React 封装一个antv-f2 | 稀土掘金](https://juejin.cn/post/7207737667991306298)
 
-### 版权信息
 
-本文原载于 [彩虹兔の博客](https://cai-hong-tu-blog.pages.dev/)，遵循 CC BY-NC-SA 4.0 协议，复制请保留原文出处。

@@ -449,6 +449,3 @@ Next.js会在每个未匹配的插槽中查找名为`default.tsx`的文件。该
 
 - [7小时精通Next.js 15终极教程 (1小时15分钟到) | bilibili](https://www.bilibili.com/video/BV1kvPcekE3K/?share_source=copy_web&vd_source=1068a5fa51e306b8564255b5bf628111&t=4493)
 
-### 版权信息
-
-本文原载于 [彩虹兔の博客](https://cai-hong-tu-blog.pages.dev/)，遵循 CC BY-NC-SA 4.0 协议，复制请保留原文出处。

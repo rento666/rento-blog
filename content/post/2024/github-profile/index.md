@@ -256,6 +256,4 @@ jobs:
 - [Hugo 对 Markdown 支持情况测试 | Github-Pages 部署的博客，作者：edward852](https://edward852.github.io/post/markdown支持情况测试/)
 - [Github 开源项目 Star 趋势图 | Github](https://github.com/star-history/star-history/tree/main)
 
-### 版权信息
 
-本文原载于 [彩虹兔の博客](https://cai-hong-tu-blog.pages.dev/)，遵循 CC BY-NC-SA 4.0 协议，复制请保留原文出处。

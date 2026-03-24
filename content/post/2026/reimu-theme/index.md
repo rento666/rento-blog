@@ -32,7 +32,7 @@ tags: ["hugo", "reimu"]
 
 ```markdown
 {\{< tagRoulette tags="打电动,看剧,看小说" icon="🎲" >}}
-````
+```
 |参数名|是否必填|默认值|说明|
 |---|---|---|---|
 |tags|选填|带有模糊效果,标签轮盘,点击按钮抽取标签|指定标签池|
@@ -60,6 +60,7 @@ Your content here
 这是效果：
 {{< link title="My GitHub" link="https://github.com/rento666" cover="https://github.githubassets.com/assets/apple-touch-icon-144x144-b882e354c005.png" escape="true" >}}
 
+{{< link link="/post/2026/reimu-theme/" cover="auto" >}}
 ```markdown
 {\{< link link="/post/2026/reimu-theme/" cover="auto" >}}
 ```

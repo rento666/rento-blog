@@ -184,6 +184,4 @@ tags: ["delta force"]
 
 - [【三角洲行动】阿萨拉 小兵 精英兵 语音合集 (中配) | bilibili视频](https://www.bilibili.com/video/BV1igzZYfEBA/?share_source=copy_web&vd_source=1068a5fa51e306b8564255b5bf628111)
 
-### 版权信息
 
-本文原载于 [彩虹兔の博客](https://cai-hong-tu-blog.pages.dev/)，遵循 CC BY-NC-SA 4.0 协议，复制请保留原文出处。

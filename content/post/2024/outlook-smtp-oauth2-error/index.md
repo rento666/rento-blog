@@ -111,6 +111,3 @@ Mail send fail: Error: Invalid login: 535 5.7.139 Authentication unsuccessful, b
 * [更新政策 | Microsoft 官网](https://techcommunity.microsoft.com/blog/outlook/keeping-our-outlook-personal-email-users-safe-reinforcing-our-commitment-to-secu/4164184)  
 * [错误的微软凭据 | Microsoft](https://support.microsoft.com/en-us/office/pop-imap-and-smtp-settings-for-outlook-com-d088b986-291d-42b8-9564-9c414e2aa040)
 
-### 版权信息
-
-本文原载于 [彩虹兔の博客](https://cai-hong-tu-blog.pages.dev/)，遵循 CC BY-NC-SA 4.0 协议，复制请保留原文出处。

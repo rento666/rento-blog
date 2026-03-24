@@ -256,6 +256,4 @@ Cloudflare就是个人开发者的赛博活佛！感谢Cloudflare看不上这三
 
 - [Cloudflare Browser Rendering(浏览器呈现) 体验](https://www.runnable.run/docs/devops/Cloudflare/cloudflare-browser-rendering/)
 
-### 版权信息
 
-本文原载于 [彩虹兔の博客](https://cai-hong-tu-blog.pages.dev/)，遵循 CC BY-NC-SA 4.0 协议，复制请保留原文出处。
