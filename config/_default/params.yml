@@ -120,7 +120,7 @@ sidebar:
     show_common: true # whether to show common sidebar, ignored on mobile devices
 
 social:
-  douyin: https://v.douyin.com/FE5n07PMuqA/
+  tiktok: https://v.douyin.com/FE5n07PMuqA/
   email: mailto:admin_reply@caihongtu.top
   github: https://github.com/rento666
   # google: https://plus.google.com/yourname
@@ -216,7 +216,7 @@ reimu_cursor:
     pointer: ../images/cursor/reimu-cursor-pointer.png
     text: ../images/cursor/reimu-cursor-text.png
 
-icon_font: 4552607_4k4bc36ef96
+icon_font: 4552607_a0oqhord1y
 
 # Font loading strategy
 # Custom Font -> Google Fonts -> Local FallBack Font

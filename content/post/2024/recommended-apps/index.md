@@ -13,6 +13,11 @@ weight: -99
 
 ## 总览
 
+{{< alertBlockquote type="tip" >}}
+部分软件具有时效性（但大部分没事），若有过期软件或开源项目，请留下评论~
+{{</alertBlockquote>}}
+
+
 | 软件分类      | 描述 |
 | :-: | :-: |
 | [娱乐类](#娱乐类) | 游戏、音乐等软件、工具 |
@@ -61,9 +66,9 @@ https://gitee.com/maotoumao/MusicFreePlugins/raw/master/plugins.json
 
 1. **Fork**[本仓库](https://github.com/mtvpls/MoonTVPlus)到你的 GitHub 账户。
 2. 登陆 **Vercel**，点击 **Add New → Project**，选择 Fork 后的仓库。
-3. 设置 **PASSWORD** 环境变量（访问密码）。
-4. 保持默认设置完成首次部署。
-5. 如需自定义 `config.json`，请直接修改 Fork 后仓库中该文件。
+3. 保持默认设置完成首次部署。   
+4. 环境变量位置：`Settings -> Environment Variables`。
+5. 设置 **USERNAME、PASSWORD、CONFIG_SUBSCRIPTION_URL** 环境变量（账号、密码、播放源）。
 6. 每次 **Push** 到 `main` 分支将自动触发重新构建。
 
 部署完成后即可通过分配的域名访问，也可以绑定自定义域名。

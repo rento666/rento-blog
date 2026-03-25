@@ -16,22 +16,27 @@ tags: ["hugo", "reimu"]
 
 ### 文章热力图
 
+> 一个页面只能有一个！
+
 这是效果：
 {{< heatMapCard levelStandard="1000,5000,10000" >}}
 
 ```markdown
-{\{<heatMapCard levelStandard="1000,5000,10000">}}
+{{</*heatMapCard levelStandard="1000,5000,10000"*/>}}
 ```
 |参数名|是否必填|默认值|说明|
 |---|---|---|---|
 |levelStandard|选填|1000,5000,10000|按照这个字数来分级|
 
 ### 标签轮盘
+
+> 一个页面只能有一个！
+
 这是效果：
 {{< tagRoulette tags="打电动,看剧,看小说" icon="🎲" >}}
 
 ```markdown
-{\{< tagRoulette tags="打电动,看剧,看小说" icon="🎲" >}}
+{{</*tagRoulette tags="打电动,看剧,看小说" icon="🎲"*/>}}
 ```
 |参数名|是否必填|默认值|说明|
 |---|---|---|---|
@@ -46,10 +51,9 @@ Your content here
 {{</alertBlockquote>}}
 
 ```markdown
-sssss
-{\{< alertBlockquote type="note" >}}
+{{</*alertBlockquote type="note"*/>}}
 Your content here
-{\{</alertBlockquote>}}
+{{</*/alertBlockquote*/>}}
 ```
 
 |参数名|是否必填|默认值|说明
@@ -58,11 +62,11 @@ Your content here
 
 ### 链接卡片
 这是效果：
-{{< link title="My GitHub" link="https://github.com/rento666" cover="https://github.githubassets.com/assets/apple-touch-icon-144x144-b882e354c005.png" escape="true" >}}
+{{< link title="短代码放到代码块中转义问题" link="https://github.com/D-Sketon/hugo-theme-reimu/issues/108" cover="https://github.githubassets.com/assets/apple-touch-icon-144x144-b882e354c005.png" escape="true" >}}
 
 {{< link link="/post/2026/reimu-theme/" cover="auto" >}}
 ```markdown
-{\{< link link="/post/2026/reimu-theme/" cover="auto" >}}
+{{</*link link="/post/2026/reimu-theme/" cover="auto"*/>}}
 ```
 
 |参数名|是否必填|默认值|说明|
@@ -84,14 +88,14 @@ Tab2 content
 {{< /tabs >}}
 
 ```markdown
-{\{< tabs 2 "center" >}}
+{{</*tabs 2 "center"*/>}}
 <!-- tab 标签页1名字 -->
 Tab1 content
 123123
 <!-- tab标签页2名字@e60c -->
 Tab2 content
 6666666
-{\{< /tabs >}}
+{{</*/tabs*/>}}
 ```
 
 |参数名|是否必填|默认值|说明|
@@ -110,24 +114,24 @@ Tab2 content
 {{< /gallery >}}
 
 ```markdown
-{\{< gallery >}}
+{{</*gallery*/>}}
 ![image](https://picsum.photos/800/600)
 ![image](https://picsum.photos/600/800)
 ![image](https://picsum.photos/700/500)
-{\{< /gallery >}}
+{{</*/gallery*/>}}
 
 ```
 
 ### 网格布局
 ```markdown
-{\{< grid width=? col=? >}}
+{{</* grid width=? col=? */>}}
 <!-- cell -->
 内容1
 <!-- cell -->
 内容2
 <!-- cell -->
 内容3
-{\{< /grid >}}
+{{</* /grid */>}}
 ```
 |参数名|是否必填|默认值|说明|
 |---|---|---|---|
@@ -142,9 +146,9 @@ Tab2 content
 内容
 {{< /details >}}
 ```markdown
-{\{< details summary="?" >}}
+{{</* details summary="?" */>}}
 内容
-{\{< /details >}}
+{{</* /details */>}}
 ```
 
 |参数名|是否必填|默认值|说明|

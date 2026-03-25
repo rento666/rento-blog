@@ -336,10 +336,9 @@ $icon-url: "//at.alicdn.com/t/c/font_#{$icon_font}.woff2";
   }
 }
 
-@if index($social-keys, "douyin") or $triangle-badge-icon == "douyin" {
-  .icon-douyin:before {
-    // content: "♪";
-    content: "ꚠ";
+@if index($social-keys, "tiktok") or $triangle-badge-icon == "tiktok" {
+  .icon-tiktok:before {
+    content: "\e64a";
   }
 }
 
