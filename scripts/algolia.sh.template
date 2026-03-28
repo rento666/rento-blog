@@ -1,0 +1,4 @@
+#!/bin/bash
+# 更新 Algolia 索引
+# 请确保在执行脚本前，已配置好 Algolia 索引和索引文件路径
+npx cross-env ALGOLIA_APP_ID={{ Application ID }} ALGOLIA_ADMIN_KEY={{ Admin API Key }} ALGOLIA_INDEX_NAME={{ 创建的索引名 }} ALGOLIA_INDEX_FILE=algolia.json atomic-algolia
