@@ -28,7 +28,7 @@ timeFormat: "2006-01-02 15:04:05"
 
 author: 彩虹兔
 email: admin_reply@caihongtu.top
-desc: "人生没有观众"
+description: "人生没有观众"
 # subtitle: "少女祈祷中..."
 subtitle:                       # 副标题
   typing:

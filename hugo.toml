@@ -10,10 +10,9 @@ defaultContentLanguage = 'zh-CN'
         weight = 1
         hasCJKLanguage = true
         [languages.zh-CN.params]
-            # 网站全局描述（会自动注入到<meta name="description">）
-            description = "彩虹兔的博客 - 分享技术干货、游戏文娱内容、生活感悟和有趣的小事 | 抖音博主彩虹兔 | 哔哩哔哩b站博主彩虹兔呀"
             [languages.zh-CN.params.injector]
                 head_begin = '''
+                    <meta name="description" content="彩虹兔的博客 - 分享技术干货、游戏文娱内容、生活感悟和有趣的小事|抖音博主彩虹兔|哔哩哔哩b站博主彩虹兔呀">
                     <!-- 必应验证 -->
                     <meta name="msvalidate.01" content="C9E9E9B01059D532F0C96A2C003BA4F5" />
                     <!-- 百度验证 -->
