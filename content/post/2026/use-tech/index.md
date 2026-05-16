@@ -54,6 +54,10 @@ Cloudflare 赛博活佛！只需要买个域名，就能部署免费的后端服
 
 ~~就是速度有点慢。。。~~
 
+2. Go + Gin + Ent ORM + Wire + Viper + Cloudflare Turnstile + PostgreSQL + Redis
+
+这套技术可以支撑起一个优秀的单体项目（毕竟独立开发者很少很少会用到*微服务*）
+
 {{< /tabs >}}
 
 ---
@@ -61,3 +65,9 @@ Cloudflare 赛博活佛！只需要买个域名，就能部署免费的后端服
 ## 后续计划
 
 为列出来的技术栈写一个基本框架，方便后续开发新项目。
+
+> 2026年5月16日更新
+
+编写基本框架，可以参考这篇文章的解决方案：
+
+{{<link link="/post/2026/selfcli/" cover="auto">}}
