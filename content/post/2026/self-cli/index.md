@@ -32,7 +32,7 @@ tags: ["CLI", "脚手架"]
 
 下面是我推荐技术栈的文章，可以看看。
 
-{{<link link="/post/2026/stack/" cover="auto">}}
+{{<link link="/post/2026/use-tech/" cover="auto">}}
 
 
 #### 2. 模板的标配功能

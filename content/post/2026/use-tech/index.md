@@ -70,4 +70,4 @@ Cloudflare 赛博活佛！只需要买个域名，就能部署免费的后端服
 
 编写基本框架，可以参考这篇文章的解决方案：
 
-{{<link link="/post/2026/selfcli/" cover="auto">}}
+{{<link link="/post/2026/self-cli/" cover="auto">}}
