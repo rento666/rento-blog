@@ -4,6 +4,7 @@ title: "【01】学习Next.js框架之安装入门、路由与布局"
 slug: "learn-nextjs-01"
 description: "本文介绍了Next.js的入门、路由、布局等知识，适合有一定React基础的人阅读。"
 date: "2025-10-26T11:37:50+08:00"
+lastmod: "2025-10-26T11:37:50+08:00"
 
 categories: ["学习笔记"]
 tags: ["nextjs"]

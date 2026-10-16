@@ -3,6 +3,7 @@ title: '博客更换为Reimu主题'
 description: 这里写了该主题的一些注意事项，包括但不限于“内置shortcode”……
 
 date: 2026-03-23T09:12:38-07:00
+lastmod: 2026-03-24T10:15:53-07:00
 categories: ["建站技术"]
 tags: ["hugo", "reimu"]
 ---

@@ -31,6 +31,13 @@ defaultContentLanguage = 'zh-CN'
                     <script src="https://trtc.io/knocket-sdk/sdk.js?identifier=73fa42c45a1b9354f5&v=1792129422715" async></script>
                 '''
 
+# Hugo 默认顺序是 lastmod = [':git', 'lastmod', ...]，也就是 git 提交时间优先于 frontmatter 里
+# 手写的 lastmod。本站老文章的 lastmod 是分批手写维护的真实更新日期，若沿用默认顺序，
+# 这些值会被 git 时间（批量改动的当天）整体压掉，等于白写。
+# 因此把手写值提到最前：老文章用真实更新日期；新文章没写 lastmod，回落到 git 自动推导。
+[frontmatter]
+    lastmod = ['lastmod', 'modified', ':git', 'date', 'publishDate']
+
 [outputs]
     home = ["Algolia", "HTML", "RSS"]
 

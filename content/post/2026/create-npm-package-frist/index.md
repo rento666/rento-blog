@@ -3,6 +3,7 @@ title: '创建第一个npm包'
 description: 这里介绍了创建并上传npm包(ai-zhipu-free-sdk)的过程。   
 
 date: 2026-03-28T23:10:04-07:00
+lastmod: 2026-03-29T15:13:17-07:00
 categories: ["学习笔记"]
 tags: ["ai", "npm", "package"]
 ---

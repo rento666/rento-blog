@@ -4,6 +4,7 @@ title: "分析Cloudflare免费计划"
 slug: "Analysis of Cloudflare Free Plan"
 description: "对Cloudflare workers 的免费计划进行剖析，计算个人如何最大程度的白嫖~"
 date: "2026-03-09T09:45:40+08:00"
+lastmod: "2026-03-09T09:45:40+08:00"
 
 categories: ["踩坑记录"]
 tags: ["cloudflare"]

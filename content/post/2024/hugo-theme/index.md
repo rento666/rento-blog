@@ -3,6 +3,7 @@
 title: "关于博客的样式改造"
 description: "讲解了首页的欢迎横幅、置顶文章……"
 date: "2024-11-21T12:08:45+08:00"
+lastmod: "2024-11-21T12:08:45+08:00"
 
 categories: ["建站技术"]
 tags: ["hugo", "blog"]

@@ -4,6 +4,7 @@ title: "抖音表情（附带Github仓库存档）"
 slug: "Douyin Emoji"
 description: "展示抖音表情Emoji，其中部分表情具有时效性，具体以官方为准。"
 date: "2025-11-26T19:11:43+08:00"
+lastmod: "2025-11-26T19:11:43+08:00"
 
 categories: ["文娱数据"]
 tags: ["douyin", "emoji"]

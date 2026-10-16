@@ -4,6 +4,7 @@ title: "【持续更新中...】【全流程】使用React的Taro和Cloudflare W
 slug: "cwbtacwff1"
 description: "除了需要购买域名，让小程序能够访问后台，其余步骤均是免费！（教买低价域名）"
 date: "2025-10-14T15:25:40+08:00"
+lastmod: "2025-10-14T15:25:40+08:00"
 
 categories: ["学习笔记"]
 tags: ["weapp", "cloudflare", "react", "taro"]

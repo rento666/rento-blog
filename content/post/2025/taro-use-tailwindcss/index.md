@@ -4,6 +4,7 @@ title: "Taro 使用 Tailwindcss，解决init报错"
 slug: "Taro Use Tailwindcss"
 description: "国内的tailwindcss版本较低"
 date: "2025-07-16T12:06:06+08:00"
+lastmod: "2025-07-16T12:06:06+08:00"
 image: ""
 math: 
 license: 
