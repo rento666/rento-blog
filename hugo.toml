@@ -26,6 +26,10 @@ defaultContentLanguage = 'zh-CN'
                     <!-- 360验证 -->
                     <meta name="360-site-verification" content="f035df54f8608e06f8c1544f32b91670" />
                 '''
+                body_end = '''
+                    <!-- Knocket -->
+                    <script src="https://trtc.io/knocket-sdk/sdk.js?identifier=73fa42c45a1b9354f5&v=1792129422715" async></script>
+                '''
 
 [outputs]
     home = ["Algolia", "HTML", "RSS"]
