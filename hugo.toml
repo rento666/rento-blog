@@ -26,6 +26,18 @@ defaultContentLanguage = 'zh-CN'
                     <!-- 360验证 -->
                     <meta name="360-site-verification" content="f035df54f8608e06f8c1544f32b91670" />
                 '''
+                head_end = '''
+                    <!--
+                      把「回到顶部」按钮上移，让开右下角的 Knocket 挂件。
+                      Knocket 浮标：48x48、right 20px、bottom 20px、z-index 999（顶边距底 68px）；
+                      主题按钮同为 48x48、z-index 999，原 bottom 30px 会整块被压住。
+                      对齐 Knocket 自己的卡片间距 12px：68 + 12 = 80px。
+                      head_end 注入点在主题 <link rel=stylesheet> 之后，同特异性下本规则生效。
+                    -->
+                    <style>
+                        .sidebar-top { bottom: 80px; }
+                    </style>
+                '''
                 body_end = '''
                     <!-- Knocket -->
                     <script src="https://trtc.io/knocket-sdk/sdk.js?identifier=73fa42c45a1b9354f5&v=1792129422715" async></script>
