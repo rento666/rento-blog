@@ -3,7 +3,6 @@
 title: "Outlook邮箱的Smtp服务出现Oauth2认证失败错误"
 description: "在本博客的评论系统接入邮箱提醒时，用到了outlook的smtp服务，但是在使用时却发现了一个错误。"
 date: "2024-11-15T22:57:11+08:00"
-lastmod: "2024-11-15T22:57:11+08:00"
 
 categories: ["踩坑记录"]
 tags: ["outlook", "smtp"]

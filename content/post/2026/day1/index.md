@@ -4,7 +4,6 @@ title: "日常记录之QClaw初尝试&桌面整理工具推荐"
 slug: "day001"
 description: "第一次使用了QClaw、将coze绑定到了微信ClawBot、使用了腾讯桌面整理工具..."
 date: "2026-04-12T21:07:07+08:00"
-lastmod: "2026-04-12T23:07:48+08:00"
 categories: ["日常记录"]
 tags: ["小程序","QClaw", "coze", "桌面整理工具"]
 

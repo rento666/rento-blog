@@ -4,7 +4,6 @@ title: "【02】学习Next.js框架之链接、导航、进阶路由"
 slug: "learn-nextjs-02"
 description: "本文介绍了Next.js的入门、路由、布局等知识，适合有一定React基础的人阅读。"
 date: "2025-10-27T09:17:42+08:00"
-lastmod: "2025-10-27T09:17:42+08:00"
 
 categories: ["学习笔记"]
 tags: ["nextjs"]

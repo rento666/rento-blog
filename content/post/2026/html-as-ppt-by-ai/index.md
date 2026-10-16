@@ -3,7 +3,6 @@ title: '使用coze AI生成PPT式HTML'
 description: "分享两种提示词，一种是通过主题直接生成，另一种是通过文案来生成。"
 
 date: 2026-03-25T11:31:48-07:00
-lastmod: 2026-03-25T11:54:54-07:00
 categories: ["学习笔记"]
 tags: ["ai", "ppt", "html"]
 ---

@@ -2,7 +2,6 @@
 title: "GitHub 个人主页 README 美化 & Star 趋势图"
 description: "提供了如何美化自己的Github主页的方法以及开源项目的Star趋势图。"
 date: "2024-11-14T22:49:27+08:00"
-lastmod: "2024-11-14T22:49:27+08:00"
 categories: ["学习笔记"]
 tags: ["github"]
 ---

@@ -3,7 +3,6 @@ title: '利用 Cloudflare Workers 实现 Glados 自动签到'
 description: 本项目实现 GLaDOS 每日自动签到，支持多账号、企业微信机器人通知，通过 Cloudflare Workers 免费部署，北京时间每日 8:00 自动执行，无需服务器、无需挂机。
 
 date: 2026-04-05T16:48:42-07:00
-lastmod: 2026-04-06T10:51:35-07:00
 categories: ["学习笔记"]
 tags: ["cloudflare", "glados"]
 ---

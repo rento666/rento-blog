@@ -4,7 +4,6 @@ title: "Cloudflare Workers 项目推荐"
 slug: " cf-workers-recommend"
 description: "推荐一些基于 Cloudflare Workers 的项目！"
 date: "2026-03-23T22:01:22+08:00"
-lastmod: "2026-03-23T22:01:22+08:00"
 
 categories: ["学习笔记"]
 tags: ["cloudflare"]

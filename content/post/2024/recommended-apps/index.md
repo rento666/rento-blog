@@ -4,7 +4,6 @@ title: "个人推荐的一些应用、APP、网站"
 slug: "apps"
 description: "内含你想要的工具！"
 date: "2024-12-08T21:44:34+08:00"
-lastmod: "2026-03-24T22:37:53+08:00"
 categories: ["软件安利"]
 tags: ["app", "software"]
 

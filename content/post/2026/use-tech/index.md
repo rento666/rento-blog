@@ -4,7 +4,6 @@ title: "技术栈推荐"
 slug: "stack"
 description: "Web开发、移动应用开发、后端开发、数据库、服务器、云平台等推荐"
 date: "2026-04-09T18:22:40+08:00"
-lastmod: "2026-04-11T12:41:12+08:00"
 categories: ["学习笔记"]
 tags: ["stack"]
 

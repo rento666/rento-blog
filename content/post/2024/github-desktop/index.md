@@ -3,7 +3,6 @@
 title: "移动Github Desktop之后，汉化失败的解决办法"
 description: GitHub桌面端从C盘移动到其他盘，如何汉化呢？
 date: "2024-11-19T11:25:20+08:00"
-lastmod: "2024-11-19T11:25:20+08:00"
 categories: ["踩坑记录"]
 tags: ["github"]
 

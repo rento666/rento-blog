@@ -2,6 +2,8 @@ baseURL = 'https://blog.caihongtu.top/'
 languageCode = 'zh-CN'
 title = '彩虹兔的博客'
 theme = "github.com/D-Sketon/hugo-theme-reimu"
+timeZone = 'Asia/Shanghai'
+enableGitInfo = true
 
 defaultContentLanguage = 'zh-CN'
 [languages]

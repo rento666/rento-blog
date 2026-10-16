@@ -4,7 +4,6 @@ title: "新版Steam下载位置（文件夹）更改"
 slug: "Steam Download Location"
 description: "可以自定义修改steam下载位置"
 date: "2025-07-10T11:18:03+08:00"
-lastmod: "2025-07-10T11:18:03+08:00"
 
 categories: ["文娱数据"]
 tags: ["steam"]
